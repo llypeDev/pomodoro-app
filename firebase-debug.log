@@ -1,0 +1,38 @@
+[debug] [2024-10-01T04:19:00.859Z] ----------------------------------------------------------------------
+[debug] [2024-10-01T04:19:00.861Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Fellype Queiroz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting:github
+[debug] [2024-10-01T04:19:00.861Z] CLI Version:   13.20.2
+[debug] [2024-10-01T04:19:00.861Z] Platform:      win32
+[debug] [2024-10-01T04:19:00.861Z] Node Version:  v22.8.0
+[debug] [2024-10-01T04:19:00.861Z] Time:          Tue Oct 01 2024 01:19:00 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-10-01T04:19:00.861Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-01T04:19:00.868Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-01T04:19:00.868Z] > authorizing via signed-in user (fellypequeirozmail@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Fellype Queiroz\OneDrive\Área de Trabalho\Projetos\pomoblack-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-10-01T04:19:05.901Z] Checked if tokens are valid: false, expires at: 1727756853398
+[debug] [2024-10-01T04:19:05.902Z] Checked if tokens are valid: false, expires at: 1727756853398
+[debug] [2024-10-01T04:19:05.902Z] > refreshing access token with scopes: []
+[debug] [2024-10-01T04:19:05.904Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-01T04:19:05.905Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-01T04:19:06.198Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-01T04:19:06.199Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-01T04:19:06.221Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-10-01T04:19:06.931Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-10-01T04:19:06.931Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
