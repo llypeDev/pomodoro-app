@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="buttons">
+        <button id="pomodoro-btn">Pomodoro</button>
+        <button id="short-break-btn">Pausa Curta</button>
+        <button id="long-break-btn">Pausa Longa</button>
+    </div>
+
+    <div id="timer">25:00</div>
+
+    <button id="start-pause-btn">INICIAR</button>
+
+    <!-- Google Login Button -->
+    <div id="login-section">
+        <button id="login-btn">Login com Google</button>
+        <p id="user-name"></p>
+    </div>
+
+    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" frameborder="0" allowfullscreen></iframe>
+
+    <div id="task-section">
+        <h3>Notas de Estudo</h3>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Adicione sua tarefa/nota..." required maxlength="100">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="task-list"></ul>
+    </div>
+</div>
+
+<!-- Aqui adicionamos o type="module" -->
+<script src="script.js" type="module"></script>
+</body>
+</html>
