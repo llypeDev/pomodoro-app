@@ -1,6 +1,13 @@
+/* Aplicação global da fonte Chakra Petch */
+* {
+    font-family: 'Chakra Petch', sans-serif; /* Aplica a fonte a todos os elementos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilização base */
 body {
-    font-family: Arial, sans-serif;
     background-color: #222831;
     color: #EEEEEE;
     margin: 0;
