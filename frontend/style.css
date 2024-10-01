@@ -8,6 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding-top: 60px;
 }
 
 /* Container principal */
@@ -120,4 +121,51 @@ iframe {
 
 .delete-btn:hover {
     background-color: #FF4747;
+}
+
+/* Estilos do Menu de Navegação */
+header {
+    background-color: #393E46;
+    padding: 10px;
+    color: #FFD369;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.312);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#login-section {
+    display: flex;
+    align-items: center;
+}
+
+#login-btn {
+    background-color: #EEEEEE;
+    color: #222831;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
 }

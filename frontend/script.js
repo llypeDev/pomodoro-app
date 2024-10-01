@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
 
 let timerDisplay = document.getElementById('timer');
@@ -173,24 +173,45 @@ const firebaseConfig = {
     measurementId: "G-1PF4DW5YQN"
 };
 
-// Initialize Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
 
-// Google Login Function
 let loginBtn = document.getElementById('login-btn');
+let userPhoto = document.getElementById('user-photo');
 let userNameDisplay = document.getElementById('user-name');
+let userInfo = document.getElementById('user-info');
+
+// Função para exibir as informações do usuário
+function showUserInfo(user) {
+    loginBtn.style.display = 'none'; // Esconde o botão de login
+    userPhoto.src = user.photoURL; // Define a foto do usuário
+    userNameDisplay.textContent = user.displayName; // Define o nome do usuário
+    userInfo.style.display = 'flex'; // Exibe o contêiner de informações
+}
+
+// Detectar estado de login ao carregar a página
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // Usuário está logado, exibe suas informações
+        showUserInfo(user);
+    } else {
+        // Usuário não está logado, exibe o botão de login
+        loginBtn.style.display = 'block';
+        userInfo.style.display = 'none';
+    }
+});
 
 loginBtn.addEventListener('click', () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
         .then((result) => {
             const user = result.user;
-            userNameDisplay.textContent = `Bem-vindo, ${user.displayName}`;
-            loginBtn.style.display = 'none'; // Hide login button after successful login
+            showUserInfo(user);
         })
         .catch((error) => {
             console.error('Erro durante o login:', error);
         });
 });
+
