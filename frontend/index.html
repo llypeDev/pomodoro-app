@@ -17,31 +17,42 @@
                 <span id="user-name" style="color:white; margin-right:10px;"></span>
                 <img id="user-photo" alt="Foto do usuário" style="width:40px; height:40px; border-radius:50%;">
             </div>
-        </div>        
-        </div>        
+        </div>
     </nav>
 </header>
 
-<div class="container">
-    <div class="buttons">
-        <button id="pomodoro-btn">Pomodoro</button>
-        <button id="short-break-btn">Pausa Curta</button>
-        <button id="long-break-btn">Pausa Longa</button>
+<div class="main-content">
+    <!-- Container principal do Pomodoro -->
+    <div class="container">
+        <div class="buttons">
+            <button id="pomodoro-btn">Pomodoro</button>
+            <button id="short-break-btn">Pausa Curta</button>
+            <button id="long-break-btn">Pausa Longa</button>
+        </div>
+
+        <div id="timer">25:00</div>
+
+        <button id="start-pause-btn">INICIAR</button>
+
+        <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" frameborder="0" allowfullscreen></iframe>
+
+        <div id="task-section">
+            <h3>Notas de Estudo</h3>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Adicione sua tarefa/nota..." required maxlength="100">
+                <button type="submit">Adicionar</button>
+            </form>
+            <ul id="task-list"></ul>
+        </div>
     </div>
 
-    <div id="timer">25:00</div>
-
-    <button id="start-pause-btn">INICIAR</button>
-
-    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" frameborder="0" allowfullscreen></iframe>
-
-    <div id="task-section">
-        <h3>Notas de Estudo</h3>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Adicione sua tarefa/nota..." required maxlength="100">
-            <button type="submit">Adicionar</button>
-        </form>
-        <ul id="task-list"></ul>
+    <!-- Bloco estilo Notion -->
+    <div class="notion-container">
+        <h3>Notas Rápidas</h3>
+        <div id="notion-blocks">
+            <button id="add-block-btn">Adicionar Nota</button>
+            <div id="notion-content"></div>
+        </div>
     </div>
 </div>
 

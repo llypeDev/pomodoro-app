@@ -215,3 +215,19 @@ loginBtn.addEventListener('click', () => {
         });
 });
 
+// Função para criar blocos de nota estilo Notion
+let addBlockBtn = document.getElementById('add-block-btn');
+let notionContent = document.getElementById('notion-content');
+
+addBlockBtn.addEventListener('click', () => {
+    let newBlock = document.createElement('div');
+    newBlock.classList.add('notion-block');
+
+    let input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    input.setAttribute('placeholder', 'Escreva sua nota...');
+
+    newBlock.appendChild(input);
+    notionContent.appendChild(newBlock);
+});
+
